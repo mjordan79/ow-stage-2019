@@ -1,9 +1,7 @@
-<!-- 
-	Corso Functional and Concurrent Programming in Java <renato.perini@objectway.com> 
-	Buildare il progetto con: mvn package       
-	Installare il progetto con: mvn install (il file fpc.jar si troverà nella cartella ./exec)
-	Eseguire con: java -cp ./exec/fcp.jar com.objectway.[NOME_CLASSE] 
--->
+<!-- Corso Functional and Concurrent Programming in Java <renato.perini@objectway.com> 
+	Buildare il progetto con: mvn package Installare il progetto con: mvn install 
+	(il file fpc.jar si troverà nella cartella ./exec) Eseguire con: java -cp 
+	./exec/fcp.jar com.objectway.[NOME_CLASSE] -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -17,9 +15,28 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-	        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<logback.version>1.2.3</logback.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<artifact.directory>exec</artifact.directory>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.28</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<finalName>fcp</finalName>

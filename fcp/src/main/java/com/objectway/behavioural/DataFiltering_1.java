@@ -5,11 +5,17 @@ import java.util.List;
 
 import com.objectway.model.Apple;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 /**
  * @author Renato Perini <renato.perini@objectway.com>
  * Data Manipulation - Filtering list in an ingenuous way.
  */
 public class DataFiltering_1 {
+	
+	private static final Logger logger = LoggerFactory.getLogger(DataFiltering_1.class.getName());
 
 	public static void main(String[] args) {
 		
@@ -91,11 +97,10 @@ public class DataFiltering_1 {
 	 * @param inventory - The inventory that we want to inspect
 	 */
 	public static void printInventory(List<Apple> inventory) {
-	    System.out.println("Inventory contains " + inventory.size() + " apples.");
+	    logger.info("Inventory contains {} apples.", inventory.size());
 		for (int i = 0; i < inventory.size(); i++) {
 			Apple apple = inventory.get(i);
-			System.out.println("Apple " + i + ": " + "Color: " + apple.getColor() + " Weight: " + apple.getWeight());
+			logger.info("Apple {}: Color: {} Weight: {}", i, apple.getColor(), apple.getWeight());
 		}
-		System.out.println();
 	}
 }

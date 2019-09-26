@@ -1,10 +1,9 @@
-package com.objectway.model;
+package com.objectway.behavioural.model;
 
 public class Apple {
 	
 	private String color;
 	private Integer weight;
-	
 	
 	public Apple() {}
 

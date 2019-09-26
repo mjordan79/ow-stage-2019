@@ -1,17 +1,18 @@
-package com.objectway.behavioural;
+package com.objectway.behavioural.ingenuous;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.objectway.model.Apple;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.objectway.behavioural.model.Apple;
 
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
  * Data Manipulation - Filtering list in an ingenuous way.
+ * What is the problem?
  */
 public class DataFiltering_1 {
 	
@@ -37,11 +38,13 @@ public class DataFiltering_1 {
 	    List<Apple> redApples = filterRedApples(inventory);
 	    List<Apple> yellowApples = filterYellowApples(inventory);
 	    List<Apple> heavyApples = filterHeavyApples(inventory);
+	    List<Apple> heavierApples = filterHeavierApples(inventory);
 	    
 	    // Let's check the result printing it out to the screen.
 	    printInventory(redApples);
 	    printInventory(yellowApples);
-	    printInventory(heavyApples);
+	    printInventory(heavyApples); // > 130 grams
+	    printInventory(heavierApples); // > 150 grams
 	}
 	
 	/**
@@ -77,14 +80,30 @@ public class DataFiltering_1 {
 	}
 	
 	/**
-	 * Filter a list and returns a new list containing apples that weight >= 130 grams.
+	 * Filter a list and returns a new list containing apples that weight > 130 grams.
 	 * @param inventory - The original inventory for apples.
 	 * @return List<Apple> - The resulting inventory
 	 */
 	public static List<Apple> filterHeavyApples(List<Apple> inventory) {
 		List<Apple> result = new ArrayList<>();
 		for (Apple apple : inventory) {
-			if (apple.getWeight() >= 130) {
+			if (apple.getWeight() > 130) {
+				result.add(apple);
+			}
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * Filter a list and returns a new list containing apples that weight > 150 grams.
+	 * @param inventory - The original inventory for apples.
+	 * @return List<Apple> - The resulting inventory
+	 */
+	public static List<Apple> filterHeavierApples(List<Apple> inventory) {
+		List<Apple> result = new ArrayList<>();
+		for (Apple apple : inventory) {
+			if (apple.getWeight() > 150) {
 				result.add(apple);
 			}
 		}

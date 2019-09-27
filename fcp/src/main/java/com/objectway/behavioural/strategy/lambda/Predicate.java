@@ -5,7 +5,7 @@ package com.objectway.behavioural.strategy.lambda;
  * @author Renato Perini <renato.perini@objectway.com>
  * @param <T>
  */
-@FunctionalInterface
+
 public interface Predicate<T> {
 	boolean test(T t);
 }

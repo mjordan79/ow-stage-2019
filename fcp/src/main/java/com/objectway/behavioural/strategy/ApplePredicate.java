@@ -1,6 +1,6 @@
 package com.objectway.behavioural.strategy;
 
-import com.objectway.behavioural.model.Apple;
+import com.objectway.behavioural.Apple;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>

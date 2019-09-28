@@ -1,6 +1,7 @@
 package com.objectway.behavioural;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
@@ -12,11 +13,28 @@ public class Apple implements Serializable {
 	
 	private String color;
 	private Integer weight;
+	private Double price;
 
-	// Constructor
+	// Constructors
+	public Apple() {}
+	
+	public Apple(String color) {
+		this.color = Objects.requireNonNull(color);
+	}
+	
+	public Apple(Integer weight) {
+		this.weight = Objects.requireNonNull(weight);
+	}
+	
 	public Apple(String color, Integer weight) {
-		this.color = color;
-		this.weight = weight;
+		this.color = Objects.requireNonNull(color);
+		this.weight = Objects.requireNonNull(weight);
+	}
+	
+	public Apple(String color, Integer weight, Double price) {
+		this.color = Objects.requireNonNull(color);
+		this.weight = Objects.requireNonNull(weight);
+		this.price = price;
 	}
 
 	// Getter and Setter methods.
@@ -34,6 +52,26 @@ public class Apple implements Serializable {
 
 	public void setWeight(Integer weight) {
 		this.weight = weight;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("[color=")
+		       .append(color)
+		       .append(" weight=")
+		       .append(weight)
+			   .append("]");
+
+		return builder.toString();
 	}
 	
 }

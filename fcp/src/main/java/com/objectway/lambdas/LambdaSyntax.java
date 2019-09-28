@@ -20,7 +20,9 @@ public class LambdaSyntax {
 		 * (parameters) -> { statements; }
 		 * 
 		 * Let's play a game. An abstract method for a functional interface corresponds
-		 * to a Lambda Expression. Let's see.
+		 * to a Lambda Expression. The method is called "Functional Descriptor" because
+		 * from the method's sign is possible to deduce the respective lambda expression.
+		 * Let's see.
 		 */
 
 		/* Abstract method:
@@ -69,7 +71,7 @@ public class LambdaSyntax {
 		 * 
 		 * because return is a statement.
 		 */
-		logger.info("No output, but you should really read my code.");
+		logger.info("No output, but you should really read the code of this class.");
 	}
 
 }

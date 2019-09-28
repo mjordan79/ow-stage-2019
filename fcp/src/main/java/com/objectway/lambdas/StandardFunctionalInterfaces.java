@@ -16,10 +16,10 @@ import org.slf4j.LoggerFactory;
  * 
  * Describes basic standard Java SE 8 Functional Interfaces.
  * 
- * @see java.util.function.Predicate<T>
- * @see java.util.function.Consumer<T>
- * @see java.util.function.Function<T, R>
- * @see java.util.function.Supplier<T>
+ * @see java.util.function.Predicate<T> [ T -> boolean ]
+ * @see java.util.function.Consumer<T> [ T -> void ]
+ * @see java.util.function.Function<T, R> [ T -> R ]
+ * @see java.util.function.Supplier<T> [ () -> T ]
  */
 public class StandardFunctionalInterfaces {
 	

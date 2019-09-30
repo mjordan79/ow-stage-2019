@@ -6,7 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.behavioural.Apple;
+import com.objectway.model.Apple;
 
 
 /**
@@ -59,7 +59,6 @@ public class DataFiltering_1 {
 				result.add(apple);
 			}
 		}
-		
 		return result;
 	}
 	
@@ -75,7 +74,6 @@ public class DataFiltering_1 {
 				result.add(apple);
 			}
 		}
-		
 		return result;
 	}
 	
@@ -90,8 +88,7 @@ public class DataFiltering_1 {
 			if (apple.getWeight() > 130) {
 				result.add(apple);
 			}
-		}
-		
+		}	
 		return result;
 	}
 	
@@ -107,7 +104,6 @@ public class DataFiltering_1 {
 				result.add(apple);
 			}
 		}
-		
 		return result;
 	}
     

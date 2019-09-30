@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.BiPredicate;
 import java.util.function.Function;
 
-import com.objectway.behavioural.Apple;
+import com.objectway.model.Apple;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>

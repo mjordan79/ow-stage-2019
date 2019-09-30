@@ -1,4 +1,4 @@
-package com.objectway.behavioural;
+package com.objectway.model;
 
 import java.io.Serializable;
 import java.util.Objects;

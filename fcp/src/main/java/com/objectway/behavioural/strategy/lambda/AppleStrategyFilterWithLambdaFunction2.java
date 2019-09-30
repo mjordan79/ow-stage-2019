@@ -6,12 +6,12 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.behavioural.Apple;
+import com.objectway.model.Apple;
 
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
- * @see Predicate
+ * @see com.objectway.behavioural.strategy.lambda.Predicate
  * Refactor previous example with a more generic type.
  */
 public class AppleStrategyFilterWithLambdaFunction2 {

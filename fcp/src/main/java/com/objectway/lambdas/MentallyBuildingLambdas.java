@@ -9,8 +9,8 @@ import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.behavioural.Apple;
 import com.objectway.lambdas.comparators.AppleComparator;
+import com.objectway.model.Apple;
 
 import static java.util.Comparator.comparing;
 
@@ -29,7 +29,7 @@ import static java.util.Comparator.comparing;
  * Third approach: Simplifying behavioural pattern passing only the sorting logic through a lambda expression.
  * Fourth: Reducing everything to one line using method reference and a static import for methods in functional interfaces.
  * 
- * @see com.objectway.behavioural.Apple
+ * @see com.objectway.model.Apple
  */
 public class MentallyBuildingLambdas {
 

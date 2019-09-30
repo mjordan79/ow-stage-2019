@@ -12,7 +12,7 @@ import java.util.function.Predicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.behavioural.Apple;
+import com.objectway.model.Apple;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>

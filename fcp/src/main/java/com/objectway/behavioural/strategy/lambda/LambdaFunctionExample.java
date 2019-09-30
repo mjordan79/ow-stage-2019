@@ -8,7 +8,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.behavioural.Apple;
+import com.objectway.model.Apple;
 
 public class LambdaFunctionExample {
 	

@@ -3,7 +3,7 @@ package com.objectway.lambdas;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
-import com.objectway.behavioural.Apple;
+import com.objectway.model.Apple;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>

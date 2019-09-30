@@ -2,7 +2,7 @@ package com.objectway.lambdas.comparators;
 
 import java.util.Comparator;
 
-import com.objectway.behavioural.Apple;
+import com.objectway.model.Apple;
 
 public class AppleComparator implements Comparator<Apple> {
 	

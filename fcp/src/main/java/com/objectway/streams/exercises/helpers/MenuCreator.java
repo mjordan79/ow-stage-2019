@@ -1,4 +1,4 @@
-package com.objectway.streams;
+package com.objectway.streams.exercises.helpers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,22 +30,23 @@ public class MenuCreator {
 		dishTypes[2] = Dish.Type.OTHER;
 	}
 	
+	private MenuCreator() {}
+	
 	public static List<Dish> getMenu(int howMuch) {
 		List<Dish> menu = new ArrayList<>();
 		for (int i = 0; i < howMuch; i++) {
-			Random r = new Random();
-			Boolean vegetarian = getRandom(0, 1, r) == 0 ? Boolean.FALSE : Boolean.TRUE;
-			String dishName = dishNames[getRandom(0, 5, r)];
-			Dish.Type type = dishTypes[getRandom(0, 2, r)];
-			int calories = getRandom(1, 1500, r);
+			Boolean vegetarian = getRandom(0, 1) == 0 ? Boolean.FALSE : Boolean.TRUE;
+			String dishName = dishNames[getRandom(0, 5)];
+			Dish.Type type = dishTypes[getRandom(0, 2)];
+			int calories = getRandom(1, 1500);
 			Dish d = new Dish(dishName, vegetarian, calories, type);
 			menu.add(d);
 		}
 		return menu;
 	}
 	
-	private static int getRandom(int min, int max, Random r) {
-		return r.nextInt((max - min) + 1) + min;
+	private static int getRandom(int min, int max) {
+		return new Random().nextInt((max - min) + 1) + min;
 	}
 	
 }

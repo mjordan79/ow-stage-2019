@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.objectway.model.Dish;
+import com.objectway.streams.exercises.helpers.MenuCreator;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>

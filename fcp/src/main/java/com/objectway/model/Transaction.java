@@ -1,4 +1,4 @@
-package com.objectway.streams.exercises.model;
+package com.objectway.model;
 
 import java.util.Objects;
 
@@ -45,9 +45,9 @@ public class Transaction {
 
 	@Override
 	public String toString() {
-		return "{" + this.trader + ", " +
+		return "{ " + this.trader + ", " +
 				"year: " + this.year + ", " +
-				"value: " + this.value + "}";
+				"value: " + this.value + "€" + " }";
 	}
 	
 }

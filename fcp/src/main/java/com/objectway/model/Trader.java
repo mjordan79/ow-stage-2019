@@ -1,4 +1,4 @@
-package com.objectway.streams.exercises.model;
+package com.objectway.model;
 
 import java.util.Objects;
 

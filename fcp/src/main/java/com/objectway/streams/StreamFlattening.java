@@ -32,7 +32,6 @@ public class StreamFlattening {
 	
 	public static void main(String[] args) {
 		
-		//List<Dish> menu = MenuCreator.getMenu(1500);
 		String[] arraysOfWords = {
 			"Goodbye",
 			"cruel",
@@ -64,9 +63,6 @@ public class StreamFlattening {
 				.distinct()
 				.collect(toList());
 	    logger.info("Result from the flatMap() operation: {}", anotherResult);
-		
-		
-
 	}
 
 }

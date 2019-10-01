@@ -25,9 +25,8 @@ public class MenuCreator {
 	};
 	
 	static {
-		dishTypes[0] = Dish.Type.FISH;
-		dishTypes[1] = Dish.Type.MEAT;
-		dishTypes[2] = Dish.Type.OTHER;
+		for (int i = 0, j = 0; i < dishTypes.length; i++, j++)
+			dishTypes[i] = Dish.Type.values()[j];
 	}
 	
 	private MenuCreator() {}
@@ -35,17 +34,17 @@ public class MenuCreator {
 	public static List<Dish> getMenu(int howMuch) {
 		List<Dish> menu = new ArrayList<>();
 		for (int i = 0; i < howMuch; i++) {
-			Boolean vegetarian = getRandom(0, 1) == 0 ? Boolean.FALSE : Boolean.TRUE;
-			String dishName = dishNames[getRandom(0, 5)];
-			Dish.Type type = dishTypes[getRandom(0, 2)];
-			int calories = getRandom(1, 1500);
+			Boolean vegetarian = getRandomInt(0, 1) == 0 ? Boolean.FALSE : Boolean.TRUE;
+			String dishName = dishNames[getRandomInt(0, 5)];
+			Dish.Type type = dishTypes[getRandomInt(0, 2)];
+			int calories = getRandomInt(1, 1500);
 			Dish d = new Dish(dishName, vegetarian, calories, type);
 			menu.add(d);
 		}
 		return menu;
 	}
 	
-	private static int getRandom(int min, int max) {
+	private static int getRandomInt(int min, int max) {
 		return new Random().nextInt((max - min) + 1) + min;
 	}
 	

@@ -1,15 +1,15 @@
 package com.objectway.streams.exercises.helpers;
 
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.objectway.streams.exercises.model.Trader;
-import com.objectway.streams.exercises.model.Transaction;
+import com.objectway.model.Trader;
+import com.objectway.model.Transaction;
 
 public class TradingCreator {
-
+	
 	private static String[] cities = {
 			"Milan",
 			"Rome",
@@ -48,7 +48,7 @@ public class TradingCreator {
 	private static String getRandomString(int length) {
 		byte[] array = new byte[length];
 		new Random().nextBytes(array);
-		return new String(array, Charset.forName("UTF-8"));
+		return new String(array, StandardCharsets.ISO_8859_1);
 	}
 	
 }

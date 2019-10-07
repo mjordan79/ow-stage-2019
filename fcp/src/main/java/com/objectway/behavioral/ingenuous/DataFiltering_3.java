@@ -1,4 +1,4 @@
-package com.objectway.behavioural.ingenuous;
+package com.objectway.behavioral.ingenuous;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +11,12 @@ import com.objectway.model.Apple;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
- * Data Manipulation - Filtering list in an ingenuous way, but better than before.
- * Problem: better than before, but still, what's the problem?
+ * Data Manipulation - Filtering list in an more compact way than before, but it's still TERRIBLE.
+ * Problem: What's better? And what's still bad?
  */
-public class DataFiltering_2 {
+public class DataFiltering_3 {
 	
-	private static final Logger logger = LoggerFactory.getLogger(DataFiltering_2.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(DataFiltering_3.class.getName());
 
 	public static void main(String[] args) {
 		
@@ -35,10 +35,10 @@ public class DataFiltering_2 {
 	    inventory.add(apple4);
 	    
 	    // Let's have fun with simple filtering.
-	    List<Apple> redApples = filterApplesByColor(inventory, "red");
-	    List<Apple> yellowApples = filterApplesByColor(inventory, "yellow");
-	    List<Apple> heavyApples = filterApplesByWeight(inventory, 130);
-	    List<Apple> heavierApples = filterApplesByWeight(inventory, 150);
+	    List<Apple> redApples = filterApples(inventory, "red", 0, true);
+	    List<Apple> yellowApples = filterApples(inventory, "yellow", 0, true);
+	    List<Apple> heavyApples = filterApples(inventory, "", 130, false);
+	    List<Apple> heavierApples = filterApples(inventory, "", 150, false);
 	    
 	    // Let's check the result printing it out to the screen.
 	    printInventory(redApples);
@@ -48,33 +48,19 @@ public class DataFiltering_2 {
 	}
 	
 	/**
-	 * Filter the inventory by the specified color.
+	 * Filter the inventory by the specified parameters.
 	 * @param inventory - The original list of apples
 	 * @param color - The color used to filter
-	 * @return List<Apple> - The resulting collection
-	 */
-	public static List<Apple> filterApplesByColor(List<Apple> inventory, String color) {
-		List<Apple> result = new ArrayList<>();
-		for (Apple apple : inventory) {
-			if (color.equalsIgnoreCase(apple.getColor()))
-				result.add(apple);
-		}
-		
-		return result;
-	}
-	
-	/**
-	 * Filter the inventory by the specified weight.
-	 * @param inventory - The original list of apples
 	 * @param weight - The weight used to filter
+	 * @param flag - If true we filter by color, if false we filter by weight
 	 * @return List<Apple> - The resulting collection
 	 */
-	public static List<Apple> filterApplesByWeight(List<Apple> inventory, Integer weight) {
+	public static List<Apple> filterApples(List<Apple> inventory, String color, Integer weight, Boolean flag) {
 		List<Apple> result = new ArrayList<>();
 		for (Apple apple : inventory) {
-			if (apple.getWeight() > weight) {
+			if (flag && color.equalsIgnoreCase(apple.getColor()) ||
+					!flag && apple.getWeight() > weight)
 				result.add(apple);
-			}
 		}
 		
 		return result;

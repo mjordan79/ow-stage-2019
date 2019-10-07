@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
- * @see com.objectway.behavioural.strategy.lambda.Predicate
+ * @see com.objectway.behavioral.strategy.lambda.Predicate
  * Shows some examples of Lambda Expressions.
  */
 public class LambdaOverview {

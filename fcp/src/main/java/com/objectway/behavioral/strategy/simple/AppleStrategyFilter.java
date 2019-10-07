@@ -1,4 +1,4 @@
-package com.objectway.behavioural.strategy.lambda;
+package com.objectway.behavioral.strategy.simple;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,17 +6,17 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.objectway.behavioral.strategy.ApplePredicate;
 import com.objectway.model.Apple;
-
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
- * @see com.objectway.behavioural.strategy.lambda.Predicate
- * Refactor previous example with a more generic type.
+ * Refactor previous ingenuous approach to filtering by using the Strategy Pattern,
+ * implementing a predicate to test for conditions. 
  */
-public class AppleStrategyFilterWithLambdaFunction2 {
+public class AppleStrategyFilter {
 	
-	private static final Logger logger = LoggerFactory.getLogger(AppleStrategyFilterWithLambdaFunction2.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(AppleStrategyFilter.class.getName());
 
 	public static void main(String[] args) {
 		
@@ -34,10 +34,13 @@ public class AppleStrategyFilterWithLambdaFunction2 {
 	    inventory.add(apple3);
 	    inventory.add(apple4);
 	    
-	    // Let's filter.
-	    List<Apple> yellowApples = filter(inventory, apple -> "yellow".equalsIgnoreCase(apple.getColor()));
+	    // We build our strategies (Strategy Pattern). One for the color and one for the weight.
+	    ApplePredicate yellowApplesPredicate = new AppleColorPredicate();
+	    ApplePredicate weightApplesPredicate = new AppleWeightPredicate();
 	    
-	    List<Apple>  heavyApples = filter(inventory, apple -> apple.getWeight() > 130);
+	    // Let's filter.
+	    List<Apple> yellowApples = filterApples(inventory, yellowApplesPredicate);
+	    List<Apple> heavyApples = filterApples(inventory, weightApplesPredicate);
 	    
 	    // Let's check the result printing it out to the screen.
 	    printInventory(yellowApples);
@@ -46,15 +49,15 @@ public class AppleStrategyFilterWithLambdaFunction2 {
 	}
 	
 	/**
-	 * @param list - The original collection to filter.
-	 * @param p - The Lambda function to apply for each member of type T of the list.
-	 * @return List<T> - The resulting collection
+	 * @param inventory - The original collection to filter.
+	 * @param predicate - The strategy to apply for the filtering.
+	 * @return List<Apple> - The resulting collection
 	 */
-	public static <T> List<T> filter(List<T> list, Predicate<T> p) {
-		List<T> result = new ArrayList<>();
-		for (T e : list) {
-			if (p.test(e))
-				result.add(e);
+	public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate predicate) {
+		List<Apple> result = new ArrayList<>();
+		for (Apple apple : inventory) {
+			if (predicate.test(apple))
+				result.add(apple);
 		}
 		
 		return result;

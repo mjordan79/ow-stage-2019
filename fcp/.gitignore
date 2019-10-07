@@ -1,5 +1,6 @@
 /target/
 /exec/
 /.settings/
+/.sts4-cache
 .project
 .classpath

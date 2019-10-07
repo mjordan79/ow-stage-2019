@@ -30,7 +30,6 @@ public class ToListCollector<T> implements Collector<T, List<T>, List<T>> {
 			t.addAll(u);
 			return t;
 		};
-		
 	}
 
 	@Override

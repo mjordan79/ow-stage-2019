@@ -1,4 +1,4 @@
-package com.objectway.behavioural.strategy.anonymousclass;
+package com.objectway.behavioral.strategy.anonymousclass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.behavioural.strategy.ApplePredicate;
+import com.objectway.behavioral.strategy.ApplePredicate;
 import com.objectway.model.Apple;
 
 

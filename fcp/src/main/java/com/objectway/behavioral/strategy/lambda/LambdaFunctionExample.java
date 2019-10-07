@@ -1,4 +1,4 @@
-package com.objectway.behavioural.strategy.lambda;
+package com.objectway.behavioral.strategy.lambda;
 
 import java.util.ArrayList;
 import java.util.Collections;

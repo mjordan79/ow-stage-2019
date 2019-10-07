@@ -1,4 +1,4 @@
-package com.objectway.behavioural.strategy.simple;
+package com.objectway.behavioral.strategy.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,17 +6,17 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.behavioural.strategy.ApplePredicate;
+import com.objectway.behavioral.strategy.ApplePredicate;
 import com.objectway.model.Apple;
+
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
- * Refactor previous ingenuous approach to filtering by using the Strategy Pattern,
- * implementing a predicate to test for conditions. 
+ * Refactor previous strategy filter approach using lambda functions instead of anonymous inner classes.
  */
-public class AppleStrategyFilter {
+public class AppleStrategyFilterWithLambdaFunction {
 	
-	private static final Logger logger = LoggerFactory.getLogger(AppleStrategyFilter.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(AppleStrategyFilterWithLambdaFunction.class.getName());
 
 	public static void main(String[] args) {
 		
@@ -34,13 +34,10 @@ public class AppleStrategyFilter {
 	    inventory.add(apple3);
 	    inventory.add(apple4);
 	    
-	    // We build our strategies (Strategy Pattern). One for the color and one for the weight.
-	    ApplePredicate yellowApplesPredicate = new AppleColorPredicate();
-	    ApplePredicate weightApplesPredicate = new AppleWeightPredicate();
-	    
 	    // Let's filter.
-	    List<Apple> yellowApples = filterApples(inventory, yellowApplesPredicate);
-	    List<Apple> heavyApples = filterApples(inventory, weightApplesPredicate);
+	    List<Apple> yellowApples = filterApples(inventory, (Apple apple) -> "yellow".equalsIgnoreCase(apple.getColor()));
+	    
+	    List<Apple>  heavyApples = filterApples(inventory, (Apple apple) -> apple.getWeight() > 130);
 	    
 	    // Let's check the result printing it out to the screen.
 	    printInventory(yellowApples);

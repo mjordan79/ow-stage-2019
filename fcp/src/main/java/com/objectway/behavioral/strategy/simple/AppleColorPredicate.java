@@ -1,6 +1,6 @@
-package com.objectway.behavioural.strategy.simple;
+package com.objectway.behavioral.strategy.simple;
 
-import com.objectway.behavioural.strategy.ApplePredicate;
+import com.objectway.behavioral.strategy.ApplePredicate;
 import com.objectway.model.Apple;
 
 /**

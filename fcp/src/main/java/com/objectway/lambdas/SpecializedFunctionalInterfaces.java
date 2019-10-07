@@ -63,9 +63,9 @@ import org.slf4j.LoggerFactory;
  * @see java.util.function.ToLongBiFunction<T, U>
  * @see java.util.function.ToDoubleBiFunction<T, U>
  */
-public class SpecializedFunctionalInterfacesIntro {
+public class SpecializedFunctionalInterfaces {
 	
-	private static final Logger logger = LoggerFactory.getLogger(SpecializedFunctionalInterfacesIntro.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SpecializedFunctionalInterfaces.class.getName());
 
 	public static void main(String[] args) {
 		

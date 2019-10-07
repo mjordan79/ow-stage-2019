@@ -1,4 +1,4 @@
-package com.objectway.behavioural.ingenuous;
+package com.objectway.behavioral.ingenuous;
 
 import java.util.ArrayList;
 import java.util.List;

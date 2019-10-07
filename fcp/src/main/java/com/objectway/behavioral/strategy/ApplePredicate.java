@@ -1,4 +1,4 @@
-package com.objectway.behavioural.strategy;
+package com.objectway.behavioral.strategy;
 
 import com.objectway.model.Apple;
 

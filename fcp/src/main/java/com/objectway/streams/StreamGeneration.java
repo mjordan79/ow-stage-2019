@@ -55,7 +55,7 @@ public class StreamGeneration {
 						       .distinct()
 						       .count();
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error("Uh oh! An exception has been thrown: {}", e.getCause());
 		}
 		logger.info("Unique words in StreamReducing.java: {}", uniqueWords);
 		

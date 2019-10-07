@@ -5,6 +5,7 @@ import java.util.Objects;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com>
+ * 
  * This is a data model class and it represents a dish in a restaurant's menu.
  * It has many fields describing the dish name, its category, calories and type. 
  */

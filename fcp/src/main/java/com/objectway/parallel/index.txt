@@ -1,3 +1,0 @@
-1. SequentialOrParallelSum.java
-2. ParallelSumWithSideEffects.java
-3. ForkJoinFramework.java

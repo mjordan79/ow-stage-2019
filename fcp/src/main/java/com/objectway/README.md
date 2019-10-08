@@ -51,6 +51,9 @@
 10. Exercises
 
 ###### 3. Collectors API.
+*Package: com.objectway.collectors*
+1. ImperativeGrouping.java
+2. 
 
 ###### 4. Concurrent Programming: Parallel Streams, Fork-Join Framework, Spliterators.
 *Package: com.objectway.parallel*

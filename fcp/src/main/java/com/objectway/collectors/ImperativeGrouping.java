@@ -8,13 +8,13 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.objectway.model.Transaction;
-import com.objectway.streams.exercises.helpers.TradingCreator;
+import com.objectway.model.Dish;
+import com.objectway.streams.exercises.helpers.MenuCreator;
 
 /**
  * @author Renato Perini <renato.perini@objectway.com
  * 
- * Grouping transactions by cities.
+ * Grouping dishes by type.
  *
  */
 public class ImperativeGrouping {
@@ -23,27 +23,28 @@ public class ImperativeGrouping {
 
 	public static void main(String[] args) {
 		
-		List<Transaction> transactions = TradingCreator.getTransactions(1500);
+		List<Dish> menu = MenuCreator.getMenu(1500);
 		
-		// Key: city, value: List of values
-		Map<String, List<Integer>> transactionsByCities = new HashMap<>();
+		// Key: Dish.Type, value: list of names.
+		Map<Dish.Type, List<String>> dishesByType = new HashMap<>();
 		
-		for (Transaction t : transactions) {
-			String city = t.getTrader().getCity();
-			List<Integer> values = null;
-			if (transactionsByCities.containsKey(city)) {
-				 values = transactionsByCities.get(city);
-			} else { // No key, no values.
-				 values = new ArrayList<>();
+		for (Dish d : menu) {
+			Dish.Type type = d.getType();
+			List<String> names = null;
+			if (dishesByType.containsKey(type)) {
+				names = dishesByType.get(type);
 			}
-			values.add(t.getValue());
-			transactionsByCities.put(city, values);
+			else { // No key, no values.
+				names = new ArrayList<>();
+			}
+			names.add(d.getName());
+			dishesByType.put(type, names);
 		}
 		
-		for (Map.Entry<String, List<Integer>> entry : transactionsByCities.entrySet()) {
-			List<Integer> values = transactionsByCities.get(entry.getKey());
-			logger.info("City of {} has {} values.", entry.getKey(), values.size());
+		for (Map.Entry<Dish.Type, List<String>> entry : dishesByType.entrySet()) {
+			List<String> names = dishesByType.get(entry.getKey());
+			logger.info("Dish of type {} has {} entries.", entry.getKey(), names.size());
 		}
-		
 	}
+	
 }

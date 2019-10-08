@@ -1,4 +1,4 @@
-# ow-academy-2019
+﻿# ow-academy-2019
 ![alt text](https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/1_ioe1w7u8/def_height/1414/def_width/2700/version/100011/type/2/q/100)
  
 #### Course: Functional and Parallel Programming in Modern Java.
@@ -25,7 +25,7 @@
 3. AppleStrategyFilterWithLambdaFunction2.java
 4. LambdaFunctionExample.java
 
-###### 2. Lambda Expressions.
+###### 2. λ Expressions.
 *Package: com.objectway.lambdas*
 1. LambdaSyntax.java
 2. LambdaOverview.java

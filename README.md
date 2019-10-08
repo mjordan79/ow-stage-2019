@@ -53,3 +53,10 @@
 ###### 3. Collectors API.
 
 ###### 4. Concurrent Programming: Parallel Streams, Fork-Join Framework, Spliterators.
+*Package: com.objectway.parallel*
+1. SequentialOrParallelSum.java
+2. ParallelSumWithSideEffects.java
+3. ForkJoinFramework.java
+4. WordCountSpliterator.java
+5. WordCount.java
+

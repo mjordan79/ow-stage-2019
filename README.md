@@ -1,6 +1,6 @@
 # ow-academy-2019
-![alt text][logo]
-[logo]: https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/1_ioe1w7u8/def_height/1414/def_width/2700/version/100011/type/2/q/100
+![alt text](https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/1_ioe1w7u8/def_height/1414/def_width/2700/version/100011/type/2/q/100)
+ 
 #### Course: Functional and Parallel Programming in Modern Java.
 #### Instructor: Renato Perini <renato.perini@objectway.com>
 

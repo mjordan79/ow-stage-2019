@@ -1,5 +1,5 @@
 <!-- 
-	Corso Functional and Concurrent Programming in Java <renato.perini@objectway.com> 
+	Corso Functional and Parallel Programming in Modern Java <renato.perini@objectway.com> 
 	Buildare il progetto con: mvn package 
 	Installare il progetto con: mvn install (il file fpc.jar si troverà nella cartella ./exec) 
 	Eseguire con: java -cp ./exec/fcp.jar com.objectway.[NOME_CLASSE] 

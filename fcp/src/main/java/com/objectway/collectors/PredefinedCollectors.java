@@ -41,6 +41,7 @@ public class PredefinedCollectors {
 		DIETETIC, NORMAL, FAT
 	};
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		
 		List<Dish> menu = MenuCreator.getMenu(1500);

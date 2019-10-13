@@ -1,6 +1,6 @@
 # Functional and Parallel Programming in Modern Java.
 ### Objectway Academy 2019
-### Instructor: Renato Perini <renato.perini@objectway.com>
+### Renato Perini <renato.perini@objectway.com>
 
 ![alt text](https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/1_ioe1w7u8/def_height/1414/def_width/2700/version/100011/type/2/q/100)
 

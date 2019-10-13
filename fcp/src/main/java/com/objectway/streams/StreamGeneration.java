@@ -5,6 +5,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -42,6 +44,9 @@ public class StreamGeneration {
 		 */
 		Stream<Integer> empty = Stream.empty();
 		
+		/*
+		 * You can create streams from arrays.
+		 */
 		int[] numArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		IntStream numArrayStream = Arrays.stream(numArray); // Note that this creates a specialized stream.
 		
@@ -50,6 +55,7 @@ public class StreamGeneration {
 		 * For computing the number of unique words in a file:
 		 */
 		long uniqueWords = 0;
+		
 		try (Stream<String> lines = Files.lines(Paths.get("src/main/java/com/objectway/streams/StreamReducing.java"), Charset.defaultCharset())) {
 			uniqueWords = lines.flatMap(line -> Arrays.stream(line.split(" ")))
 						       .distinct()
@@ -64,8 +70,14 @@ public class StreamGeneration {
 		 * It takes a starting value and a lambda of type UnaryOperator<T> to generate the stream.
 		 * Generally useful when a stream of sequential values is needed.
 		 */
+		Stream<Integer> uhph = Stream.iterate(1,  n -> n + 2).limit(4);
+		List<Integer> list = uhph.collect(Collectors.toList());
+		for (Integer i : list) {
+			logger.info("i in list: {}", i);
+		}
+		
 		int sum = Stream.iterate(0,  n -> n + 2)
-			.limit(20)
+			.limit(4)
 			.reduce(0, (i1, i2) -> i1 + i2);
 		logger.info("Sum from infinite stream: {}", sum);
 		

@@ -60,7 +60,7 @@ public class StreamReducing {
 		 * Also, Integer has a sum() static method, so we can use a method reference.
 		 */
 		Optional<Integer> sumOverloaded = numbers.stream()
-				.reduce(Integer::sum);
+				.reduce(Integer::sum); // Integer::sum equals to (u, v) -> Integer.sum(u, v)
 		sumOverloaded.ifPresent(i -> {
 			logger.info("Sum with the overloaded reduce() and the Integer.sum() static method: {}", i);
 		});
@@ -89,8 +89,8 @@ public class StreamReducing {
 				.reduce(0, Integer::sum); // And then we reduce(), to compute the result we want.
 		logger.info("The whole menu has {} total calories!", totalCalories);
 		
-		/*
-		 * Can I compute the number of elements into a Stream without using the count() operation but only reduce?
+		/* Food for thought:
+		 * can I compute the number of elements into a Stream without using the count() operation but only reduce?
 		 * Again, Map-Reduce pattern will help.
 		 */
 		int totalElements = menu.stream()

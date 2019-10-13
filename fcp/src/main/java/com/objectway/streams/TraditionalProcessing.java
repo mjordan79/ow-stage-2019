@@ -19,6 +19,9 @@ import com.objectway.streams.exercises.helpers.MenuCreator;
  * removes duplicated dishes, sort the list by calories, extract names from the objects and
  * finally presents the user with the top three less energetic dishes.
  * 
+ * This code is Java 7 compatible and all operations are made without streams / lambdas.
+ * How verbose is it? *LOTS of boilerplate code!*
+ * 
  * Try to describe the structure of the program. How is it built? What are its characteristics?
  * Enumerate the strong points of this code and / or its problems.
  */

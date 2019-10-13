@@ -41,7 +41,7 @@ public class StreamFlattening {
 		/*
 		 * To use the Stream API on an array, we should convert it into a stream first.
 		 * An array is a fundamental data structure provided by the Java language, doesn't implement
-		 * any collection interface not it extends one. In fact, arrays are not part of the JCF.
+		 * any collection interface nor it extends one. In fact, arrays are not part of the JCF.
 		 */
 		Stream<String> array = Arrays.stream(arraysOfWords);
 		

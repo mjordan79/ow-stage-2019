@@ -118,7 +118,7 @@ public class SpecializedFunctionalInterfaces {
 	}
 	
 	/**
-	 * Filter a list of Integer types using autoboxing. The resulting list is build using primitive int.
+	 * Filter a list of Integer types using autoboxing. The resulting list is built using primitive int.
 	 * @param list 
 	 * @param p the Lambda Expression used to filter.
 	 * @return List<Integer> built from primitive int

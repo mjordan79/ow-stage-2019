@@ -1,6 +1,6 @@
 package com.objectway.streams.exercises.helpers;
 
-import java.nio.charset.StandardCharsets;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -48,7 +48,7 @@ public class TradingCreator {
 	private static String getRandomString(int length) {
 		byte[] array = new byte[length];
 		new Random().nextBytes(array);
-		return new String(array, StandardCharsets.ISO_8859_1);
+		return new String(array, Charset.defaultCharset());
 	}
 	
 }

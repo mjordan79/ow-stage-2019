@@ -48,7 +48,8 @@
 7. StreamSpecializations.java
 8. StreamRanges.java
 9. StreamGeneration.java
-10. Exercises
+10. DebuggingStreamsWithPeek.java
+11. Exercises
 
 ###### 3. Collectors API.
 *Package: com.objectway.collectors*

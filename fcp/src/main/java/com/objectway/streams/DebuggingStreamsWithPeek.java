@@ -1,6 +1,5 @@
 package com.objectway.streams;
 
-import java.util.OptionalDouble;
 import java.util.Random;
 import java.util.stream.Stream;
 
@@ -25,7 +24,6 @@ public class DebuggingStreamsWithPeek {
 	
 	private static final Logger logger = LoggerFactory.getLogger(DebuggingStreamsWithPeek.class.getName());
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		
 		// What's happen if I put an intermediate .forEach(System.out::println) after .mapToInt?

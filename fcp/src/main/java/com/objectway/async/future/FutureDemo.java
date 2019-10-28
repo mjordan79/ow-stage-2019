@@ -18,6 +18,12 @@ import org.slf4j.LoggerFactory;
  * Shows the practical usage of basic asynchronous programming through
  * an ExecutorService, Future<T> and Callable<T> objects. 
  *
+ * Limitations / not easy things to do with ExecutorServices:
+ *    1) Not explicitly engineered for asynchronous programming (somewhat inbetween parallel and async, though).
+ *    2) Combining two asynchronous tasks both when they're independent or one of them depends by another one.
+ *    3) Waiting for the completion of all tasks defined by a set of Futures.
+ *    4) Programmatically completing the Future task, for example by providing manually a result.
+ *    5) Reacting to a Future completion through some sort of action (we must block at a certain point waiting for results).
  */
 public class FutureDemo {
 	
@@ -53,7 +59,8 @@ public class FutureDemo {
 	}
 	
 	public static String getMessage(Throwable t) {
-		return Optional.ofNullable(t.getMessage()).orElse("Exception occurred. No message available.");
+		Optional<String> message = Optional.ofNullable(t.getMessage());
+		return message.orElse("Exception occurred. No message available.");
 	}
 	
 }

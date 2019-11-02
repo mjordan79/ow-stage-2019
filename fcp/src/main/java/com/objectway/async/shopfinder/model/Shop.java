@@ -1,4 +1,4 @@
-package com.objectway.async.shopfinder.sequential;
+package com.objectway.async.shopfinder.model;
 
 import java.util.Random;
 

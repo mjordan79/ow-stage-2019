@@ -17,7 +17,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<logback.version>1.2.3</logback.version>
+		<logback.version>1.2.13</logback.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<artifact.directory>exec</artifact.directory>
 	</properties>
